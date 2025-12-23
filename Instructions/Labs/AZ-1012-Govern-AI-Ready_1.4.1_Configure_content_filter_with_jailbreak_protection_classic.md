@@ -1,7 +1,7 @@
-# AI Ready Governance hands-on exercise: Configure content filters with prompt shields
+# AI Ready Governance hands-on exercise: Configure content filters with jailbreak protection (classic)
 
 ## Background information
-The content filtering system integrated into Azure AI Foundry runs alongside the core models, including image generation models. It uses a collection of multi-class classification models to detect four categories of harmful content (violence, hate, sexual, and self-harm) at four severity levels (safe, low, medium, and high), and optional binary classifiers for detecting jailbreak risk (incorporated into prompt shields), existing text, and code in public repositories.
+The content filtering system integrated into Microsoft Foundry runs alongside the core models, including image generation models. It uses a collection of multi-class classification models to detect four categories of harmful content (violence, hate, sexual, and self-harm) at four severity levels (safe, low, medium, and high), and optional binary classifiers for detecting jailbreak risk (incorporated into prompt shields), existing text, and code in public repositories.
 The default content filtering configuration is set to filter at the medium severity threshold for all four content harms categories for both prompts and completions. That means that content that is detected at severity level medium or high is filtered, while content detected at severity level low or safe is not filtered by the content filters.
 Prompt shields and protected text and code models are optional and on by default. For prompt shields and protected material text and code models, the configurability feature allows all customers to turn the models on and off. The models are on by default and can be turned off to match your requirements.
 
@@ -12,22 +12,22 @@ Additionally, since some scenarios involve exploring how individuals might attem
 ## Prerequisites
 - **Azure subscription**: If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
 - **Permissions**: To create Azure AI Services resources, you should have the Owner role assigned at the Azure subscription or the target resource group level.
-- **Familiarity with Azure AI Content Safety**: To learn more, refer to [Content Safety in the Azure AI Foundry portal](https://learn.microsoft.com/en-us/azure/ai-foundry/ai-services/content-safety-overview).
+- **Familiarity with Azure AI Content Safety**: To learn more, refer to [Content Safety in the Microsoft Foundry portal](https://learn.microsoft.com/en-us/azure/ai-foundry/ai-services/content-safety-overview).
 
 ## Estimated duration
 10 minutes
 
-### Task 1: Create an Azure AI Foundry project
+### Task 1: Create a Microsoft Foundry project
 
-1. Start a web browser, navigate to the **All resources** page of the Azure AI Foundry portal at [https://ai.azure.com/allResources](https://ai.azure.com/allResources) and sign in by providing the credentials of a user account which has the Owner role assigned at the Azure subscription level.
-1. On the **All resources** page of the Azure AI Foundry portal, select **Create new**.
-1. On the **Create project** pane, ensure that the **Azure AI Foundry resource** option is selected and then select **Next**.
+1. Start a web browser, navigate to the **All resources** page of the Microsoft Foundry portal at [https://ai.azure.com/allResources](https://ai.azure.com/allResources) and sign in by providing the credentials of a user account which has the Owner role assigned at the Azure subscription level.
+1. On the **All resources** page of the Microsoft Foundry portal, select **Create new**.
+1. On the **Create project** pane, ensure that the **Microsoft Foundry resource** option is selected and then select **Next**.
 1. On the **Create a project** pane, expand the **Advanced options** section and perform the following tasks:
 
    - In the **Project** text box, enter an arbitrary project name (we will name it **content-filter-project**).
    - In the **Subscription** drop-down list, select the subscription you are using in this exercise.
    - Select **Create new resource group** link, in the **Create new resource group** text box, enter **content-filter-project-RG** and select **OK**.
-   - Accept the default value of the **Azure AI Foundry resource** (**content-filter-project-resource**).
+   - Accept the default value of the **Microsoft Foundry resource** (**content-filter-project-resource**).
    - In the **Region** drop-down list, select the Azure region in which you intend to provision the project resource.
    - Select **Create**.
 
@@ -35,7 +35,7 @@ Additionally, since some scenarios involve exploring how individuals might attem
 
 ### Task 2: Create a content filter
 
-1. In the web browser displaying the Azure AI Foundry portal, on the **Overview** page of **content-filter-project**, in the vertical menu on the left side, select **Guardrails + controls**. 
+1. In the web browser displaying the Microsoft Foundry portal, on the **Overview** page of **content-filter-project**, in the vertical menu on the left side, select **Guardrails + controls**. 
 1. On the **Build Trusted AI with guardrails and controls** pane and select **Content filters**.
 1. On the **Guardrails + Controls** page, select **+ Create content filter**.
 1. On the **Basic information** tab of the **Create filters to allow or block specific types of content** pane, in the **Name** text box, enter **CustomComplianceContentFilter**, and then select **Next**.
@@ -69,10 +69,10 @@ Additionally, since some scenarios involve exploring how individuals might attem
 
 ### Task 3: Perform cleanup
 
-1. In the web browser displaying the Azure AI Foundry portal, navigate back to the **Build Trusted AI with guardrails and controls** pane and select **Content filters**.
+1. In the web browser displaying the Microsoft Foundry portal, navigate back to the **Build Trusted AI with guardrails and controls** pane and select **Content filters**.
 1. On the **Guardrails + Controls** page, select the checkbox next to the **CustomComplianceContentFilter** entry, select **Delete**, and, when prompted for confirmation, select **Delete** again.
 1. On the **Guardrails + Controls** page, at the bottom of the navigation menu on the left, select **Management center**.
 1. On the **content-filter-project-resource** page, select the **content-filter-project** entry, select **Delete project**, and, when prompted for confirmation, select **Delete** again.
-1. Open another tab in the web browser displaying the Azure AI Foundry portal, navigate to the Azure portal at [https://portal.azure.com](https://portal.azure.com) and, if prompted, sign in by providing the same credentials you have been using throughout this exercise.
+1. Open another tab in the web browser displaying the Microsoft Foundry portal, navigate to the Azure portal at [https://portal.azure.com](https://portal.azure.com) and, if prompted, sign in by providing the same credentials you have been using throughout this exercise.
 1. In the Azure portal, use the **Search** text box at the top of the page to search for **content-filter-project-RG** and, in the list of results, select **content-filter-project-RG**.
 1. On the **content-filter-project-RG** page, select **Delete resource group**, on the **Delete a resource group** pane, in the **Enter resource group name to confirm deletion** text box, enter **content-filter-project-RG**, select **Delete**, and, when prompted for confirmation, select **Delete** again.

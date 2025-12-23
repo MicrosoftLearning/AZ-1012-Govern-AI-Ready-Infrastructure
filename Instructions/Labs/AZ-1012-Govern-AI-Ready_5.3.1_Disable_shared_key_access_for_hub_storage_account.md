@@ -1,16 +1,16 @@
-# AI Ready Governance hands-on exercise: Disable shared-key access for an Azure AI Foundry hub storage account
+# AI Ready Governance hands-on exercise: Disable shared-key access for a Microsoft Foundry hub storage account
 
 ## Background information
 Every secure request to an Azure Storage account must be authorized. By default, requests can be authorized with either Microsoft Entra credentials, or by using the account access key for Shared Key authorization. Of these two types of authorization, Microsoft Entra ID provides superior security and ease of use over Shared Key, and is recommended by Microsoft. To require clients to use Microsoft Entra ID to authorize requests, you can disallow requests to the storage account that are authorized with Shared Key.
 
-An Azure AI Foundry hub defaults to use of a shared key to access its default Azure Storage account. With key-based authorization, anyone who has the key and access to the storage account can access data.
+A Microsoft Foundry hub defaults to use of a shared key to access its default Azure Storage account. With key-based authorization, anyone who has the key and access to the storage account can access data.
 
 To reduce the risk of unauthorized access, you can disable key-based authorization and instead use Microsoft Entra ID for authorization. This configuration uses a Microsoft Entra ID value to authorize access to the storage account. The identity used to access storage is either the user's identity or a managed identity. The user's identity is used to view data in Azure Machine Learning studio or to run a notebook while authenticated with the user's identity. Machine Learning uses a managed identity to access the storage account. An example is when the managed identity runs a training job.
 
-**Important**: As of October 2025, the option to disable shared-key access for your hub's storage account is in public preview.
+**Important**: As of December 2025, the option to disable shared-key access for your hub's storage account is in public preview.
 
 ## Scenario
-Your company is building an enterprise-grade AI platform using Azure AI Foundry to support multiple teams working on projects such as natural language processing, predictive analytics, and computer vision. To strengthen governance over sensitive AI data and prevent the risks associated with shared keys being distributed or misused, your company decided to disable key-based authorization on Azure Storage accounts associated with the Azure AI Foundry hubs and use Microsoft Entra ID, leveraging either user identities or managed identities for secure, auditable access to storage when running notebooks, managing datasets, or executing training jobs.
+Your company is building an enterprise-grade AI platform using Microsoft Foundry to support multiple teams working on projects such as natural language processing, predictive analytics, and computer vision. To strengthen governance over sensitive AI data and prevent the risks associated with shared keys being distributed or misused, your company decided to disable key-based authorization on Azure Storage accounts associated with the Microsoft Foundry hubs and use Microsoft Entra ID, leveraging either user identities or managed identities for secure, auditable access to storage when running notebooks, managing datasets, or executing training jobs.
 
 ## Prerequisites
 - **Azure subscription**: If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
@@ -21,7 +21,7 @@ Your company is building an enterprise-grade AI platform using Azure AI Foundry 
 ## Estimated duration
 15 minutes
 
-### Task 1: Create Azure AI Foundry hub
+### Task 1: Create Microsoft Foundry hub
 
 1. Start a web browser, navigate to the Azure portal at [https://portal.azure.com](https://portal.azure.com) and sign in by providing the credentials of a user account which has the Owner role assigned at the Azure subscription level.
 1. In the Azure portal, use the **Search** text box at the top of the page to search for **AI Foundry** and, in the list of results, select **AI Foundry**.
@@ -68,7 +68,7 @@ Your company is building an enterprise-grade AI platform using Azure AI Foundry 
 1. In the web browser displaying the Azure portal, on the **secure-storage-hub** **Overview** page, in the **Essentials** section, select the link to the newly created storage account.
 1. On the storage account page, in the vertical menu on the left side, select **Access Control (IAM)**.
 1. On the storage account's **Access Control (IAM)** page, select the **Role assignments** tab.
-1. In the search text box, enter **secure-storage-hub** and review the list of results. Verify that there are three entries, representing the following roles assigned to the system assigned managed identity associated with the newly provisioned Azure AI Foundry hub:
+1. In the search text box, enter **secure-storage-hub** and review the list of results. Verify that there are three entries, representing the following roles assigned to the system assigned managed identity associated with the newly provisioned Microsoft Foundry hub:
 
    - **Azure AI Administrator** - inherited from the **secure-storage-hub-RG** resource group
    - **Storage Blob Data Contributor** - assigned directly to the hub's storage account

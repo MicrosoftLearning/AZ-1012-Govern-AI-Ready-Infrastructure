@@ -1,10 +1,10 @@
 # AI Ready Governance hands-on exercise: Restrict deployable models with a custom Azure initiative
 
 ## Background information
-When using models from Azure AI Foundry and Azure OpenAI with Azure AI Foundry, you have the option to implement custom policies to restrict which specific models users can deploy. This capability is available for Azure AI Foundry project and hub-based project. In addition, you can leverage a built-in policy definition to apply similar restrictions to ensure that Azure Machine Learning deployments use only approved Registry models. To minimize the number of policy assignments, it is possible to combine multiple policy definitions into initiatives.
+When using models from Microsoft Foundry and Azure OpenAI with Microsoft Foundry, you have the option to implement custom policies to restrict which specific models users can deploy. This capability is available for Microsoft Foundry project and hub-based project. In addition, you can leverage a built-in policy definition to apply similar restrictions to ensure that Azure Machine Learning deployments use only approved Registry models. To minimize the number of policy assignments, it is possible to combine multiple policy definitions into initiatives.
 
 ## Scenario
-Your company plans to implement custom policies in Azure AI Foundry projects to restrict which specific models can be deployed by users. This will ensure that only approved models are available within project and hub-based environments, maintaining governance and consistency across AI solutions. In parallel, your company plans to apply built-in policy definitions to its Azure Machine Learning workspaces to allow deployments of only pre-approved Registry models. By combining these policies into initiatives, the organization will be able to enforce consistent compliance controls across both Azure AI Foundry and Azure Machine Learning workloads.
+Your company plans to implement custom policies in Microsoft Foundry projects to restrict which specific models can be deployed by users. This will ensure that only approved models are available within project and hub-based environments, maintaining governance and consistency across AI solutions. In parallel, your company plans to apply built-in policy definitions to its Azure Machine Learning workspaces to allow deployments of only pre-approved Registry models. By combining these policies into initiatives, the organization will be able to enforce consistent compliance controls across both Microsoft Foundry and Azure Machine Learning workloads.
 
 ## Prerequisites
 - **Azure subscription**: If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
@@ -95,7 +95,7 @@ Your company plans to implement custom policies in Azure AI Foundry projects to 
 
 1. On the **Policy parameters** tab, ensure that the drop-down list in the **Value Type** column for the **[Custom] Allowed Azure AI Services models** policy definition contains the **Set value** entry and, in the **Value(s)** text box, enter the comma separated list of models and their versions (within double quotes) to be allowed, enclosed by square brackets (we will use **["gpt-5-mini,0807", "DeepSeek-V3.1"]**). 
 
-   **Note**: You can find the model names and their versions in the [Azure AI Foundry Model Catalog](https://ai.azure.com/explore/models). Select the model to view the details, and then copy the model name and their version in the title.
+   **Note**: You can find the model names and their versions in the [Microsoft Foundry Model Catalog](https://ai.azure.com/explore/models). Select the model to view the details, and then copy the model name and their version in the title.
 
    **Note**: Policy parameters are inputs into individual policies.​ 
 

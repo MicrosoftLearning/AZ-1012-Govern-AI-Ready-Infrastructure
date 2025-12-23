@@ -4,7 +4,7 @@
 When using models from Azure AI Foundry and Azure OpenAI with Azure AI Foundry, you have the option to implement custom policies to control which type of deployment options are available to users. This ability is available for both an Azure AI Foundry project and hub-based project.
 
 ## Scenario
-Your company configures custom policies in Azure AI Foundry to disable global deployments and restrict AI workloads to approved regions or data zones. This will ensure compliance with regulatory and corporate requirements by keeping sensitive data within the designated residency boundaries.
+Your company configures custom policies in Microsoft Foundry to disable global deployments and restrict AI workloads to approved regions or data zones. This will ensure compliance with regulatory and corporate requirements by keeping sensitive data within the designated residency boundaries.
 
 ## Prerequisites
 - **Azure subscription**: If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
