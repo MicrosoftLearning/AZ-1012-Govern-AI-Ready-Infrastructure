@@ -35,28 +35,28 @@ Because the platform is designed to evaluate how users may attempt to manipulate
    * In the **Subscription** drop-down list, select the subscription you are using in this exercise.
    * Select **Create new resource group** link, in the **Create new resource group** text box, enter **content-filter-project-new-RG** and select **OK**.
    * Accept the default value of the **Microsoft Foundry resource** (**content-filter-project-new-resource**).
-   * In the **Region** drop-down list, select the Azure region in which you intend to provision the project resource.
+   * In the **Region** drop-down list, select the Azure region in which you intend to provision the **Foundry** resource and the corresponding project.
    * Select **Create**.
 
-   **Note**: Wait until the resource is provisioned. This might take about one minute. Once the project is created, the web browser should display the **Home** page of the Microsoft Foundry portal. If needed, turn the **New Foundry** switch at the top of the page to the **On** position and verify that the project name appears in the upper left corner of the page.
+   **Note**: Wait until the resource and its default project are provisioned. This might take about one minute. Once the project is created, the web browser should display its **Home** page in the Microsoft Foundry portal. If needed, turn the **New Foundry** switch at the top of the page to the **On** position and verify that the project name appears in the upper left corner of the page.
 
-   ### Task 2: Deploy a model in the project
+### Task 2: Deploy a model in the project
 
-1. On the **Home** page of the Microsoft Foundry portal, in the upper right corner, select **Discover**.
-2. On the **Discover** page of the Microsoft Foundry portal, in the vertical menu on the left side, select **Models**.
+1. On the project's **Home** page in the Microsoft Foundry portal, in the upper right corner, select **Discover**.
+2. On the project's **Discover** page in the Microsoft Foundry portal, in the vertical menu on the left side, select **Models**.
 3. In the **Search** text box, enter **gpt-4.1-mini** and, in the list of results, select **gpt-4.1-mini**.
 
    **Note**: If the **gpt-4.1-mini** model is not available, select another GPT chat completion model
 
 4. On the **gpt-4.1-mini** page, select **Deploy** and, in the drop-down menu, select **Default settings**.
 
-   ### Task 3: Create a Microsoft Foundry agent
+### Task 3: Create a Microsoft Foundry agent
 
 1. On the **gpt-4.1-mini** page of the Microsoft Foundry portal, in the vertical menu on fthe left side, select **Agents**.
 2. On the **Agents** page, select **Create agent**.
 3. In the **Create an agent** dialog box, in the **Agent name** text box, enter **content-filter-project-new-agent** and select **Create**.
 
-   ### Task 4: Review predefined guardrails and blocklists
+### Task 4: Review predefined guardrails and blocklists
 
 1. On the **Agents** page of the Microsoft Foundry portal, in the vertical menu on fthe left side, select **Guardrails**.
 2. On the **Guardrails** page of the Microsoft Foundry portal, review the content of the **Guardrails** tab and note that it contains two automatically generated guardrails named **Microsoft.Default** and **Microsoft.DefaultV2**.
@@ -67,7 +67,7 @@ Because the platform is designed to evaluate how users may attempt to manipulate
 7. On the **Guardrails** page, select the **Blocklists** tab.
 8. On the **Blocklists** tab, note the built-in **Profanity** filter blocklist.
 
-   ### Task 5: Create a guardrail
+### Task 5: Create a guardrail
 
 1. On the **Guardrails** page of the Microsoft Foundry portal, select the **Guardrails** tab.
 2. On the **Guardrails** tab, select **Create**.
@@ -101,7 +101,7 @@ Because the platform is designed to evaluate how users may attempt to manipulate
 
    * Select **Submit**.
 
-   ### Task 6: Perform cleanup
+### Task 6: Perform cleanup
 
 1. Open another tab in the web browser displaying the Microsoft Foundry portal, navigate to the Azure portal at [https://portal.azure.com](https://portal.azure.com) and, if prompted, sign in by providing the same credentials you have been using throughout this exercise.
 2. In the Azure portal, use the **Search** text box at the top of the page to search for **content-filter-project-new-RG** and, in the list of results, select **content-filter-project-new-RG**.
