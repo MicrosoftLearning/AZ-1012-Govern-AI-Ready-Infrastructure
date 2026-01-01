@@ -54,10 +54,10 @@ Your company plans to develop a global analytics platform that will integrate co
    - In the **Subscription** drop-down list, select the subscription you are using in this exercise.
    - Select **Create new resource group** link, in the **Create new resource group** text box, enter **foundry-quotas-project-new-RG** and select **OK**.
    - Accept the default value of the **Microsoft Foundry resource** (**foundry-quotas-project-new-resource**).
-   - In the **Region** drop-down list, select the Azure region in which you intend to provision the **Foundry** resource and the corresponding project.
+   - In the **Region** drop-down list, select the Azure region in which you intend to provision the project resource.
    - Select **Create**.
 
-   **Note**: Wait until the resource and its default project are provisioned. This might take about one minute. Once the project is created, the web browser should display its **Home** page in the Microsoft Foundry portal. If needed, turn the **New Foundry** switch at the top of the page to the **On** position and verify that the project name appears in the upper left corner of the page.
+   **Note**: Wait until the resource is provisioned. This might take about one minute. Once the project is created, the web browser should display the **Home** page of the Microsoft Foundry portal. If needed, turn the **New Foundry** switch at the top of the page to the **On** position and verify that the project name appears in the upper left corner of the page.
 
 ### Task 2: Deploy a model in the project
 
